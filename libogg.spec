@@ -73,7 +73,7 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 
 %build
 rm missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
