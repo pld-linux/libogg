@@ -72,9 +72,9 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 %patch0 -p1
 
 %build
-rm missing
+rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
