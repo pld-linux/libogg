@@ -2,7 +2,7 @@ Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Name:		libogg
 Version:	1.0rc2
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
@@ -18,6 +18,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	libogg0
 
 %description
 Libogg is a library for manipulating ogg bitstreams. It handles both
@@ -36,6 +37,7 @@ Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
+Obsoletes:	libogg0-devel
 
 %description devel
 The libogg-devel package contains the header files and documentation
