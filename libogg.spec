@@ -36,7 +36,7 @@ Summary:	Ogg Bitstream Library Development
 Summary(pl):	Pliki nag³ówkowe i dokumentacja developerska
 Summary(pt_BR):	Bibliotecas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libogg0-devel
 
 %description devel
@@ -56,7 +56,7 @@ Summary:	Ogg Bitstream Static Library
 Summary(pl):	Biblioteka statyczna Ogg
 Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 The libogg-static package contains the static libraries of libogg.
