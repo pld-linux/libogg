@@ -2,8 +2,8 @@ Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Summary(pt_BR):	Biblioteca libogg
 Name:		libogg
-Version:	1.0rc3
-Release:	2
+Version:	1.0
+Release:	1
 Epoch:		1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
@@ -87,8 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-gzip -9nf AUTHORS CHANGES README
-
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -101,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz doc/*.{html,png}
+%doc AUTHORS CHANGES README doc/*.{html,png} doc/ogg/
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/ogg
