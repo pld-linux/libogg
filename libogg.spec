@@ -8,6 +8,7 @@ Epoch:		2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
+# Source0-md5: 382a7089f42e6f82e7d658c1cb8ee236
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
 BuildRequires:	autoconf
