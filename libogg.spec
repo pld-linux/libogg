@@ -1,5 +1,6 @@
 Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs≥ugi strumieni bitowych Ogg
+Summary(pt_BR):	Biblioteca libogg
 Name:		libogg
 Version:	1.0rc3
 Release:	2
@@ -11,6 +12,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	‚…¬Ã…œ‘≈À…
+Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
@@ -29,13 +33,23 @@ Libogg jest bibliotek± do manipulacji strumieniami bitowymi ogg.
 Obs≥uguje ona zarÛwno tworzenie strumieni jak i uzyskiwanie pakietÛw
 ze strumieni.
 
+%description -l pt_BR
+Ogg e' uma familia de diversos projetos de multimÌdia e processamento
+de sinais. libogg È a biblioteca do formato de codec bitstream para o
+codec Vorbis, formando o encoder/decoder de ·udio Ogg Vorbis.
+
 %package devel
 Summary:	Ogg Bitstream Library Development
 Summary(pl):	Pliki nag≥Ûwkowe i dokumentacja developerska
+Summary(pt_BR):	Bibliotecas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 Obsoletes:	libogg0-devel
 
@@ -47,13 +61,22 @@ needed to develop applications with libogg.
 Pliki nag≥Ûwkowe i dokumentacja potrzebna do rozwijania aplikacji
 uøywaj±cych biblioteki libogg.
 
+%description -l pt_BR devel
+Bibliotecas e arquivos de inclus„o para desenvolvimento com o Ogg
+Vorbis.
+
 %package static
 Summary:	Ogg Bitstream Static Library
 Summary(pl):	Biblioteka statyczna Ogg
+Summary(pt_BR):	Bibliotecas est·ticas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -61,6 +84,9 @@ The libogg-static package contains the static libraries of libogg.
 
 %description -l pl static
 Statyczna biblioteka libogg.
+
+%description -l pt_BR static
+Bibliotecas est·ticas para desenvolvimento com o Ogg Vorbis.
 
 %prep
 %setup -q 
