@@ -72,7 +72,6 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -87,21 +86,22 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-install COPYING AUTHORS CHANGES README $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}/
-
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+mv -f $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version} devel-docs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS CHANGES COPYING README
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_datadir}/doc/%{name}-%{version}
+%doc devel-docs/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/ogg
