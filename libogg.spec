@@ -3,9 +3,9 @@ Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Summary(pt_BR):	Biblioteca libogg
 Name:		libogg
 Version:	1.0
-Release:	2
+Release:	3
 Epoch:		2
-License:	LGPL
+License:	BSD
 Vendor:		Xiphophorus <team@xiph.org>
 Group:		Libraries
 Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc AUTHORS CHANGES README doc/*.{html,png} doc/ogg/
+%doc COPYING AUTHORS CHANGES README doc/*.{html,png} doc/ogg/
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/ogg
