@@ -2,15 +2,15 @@ Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Summary(pt_BR):	Biblioteca libogg
 Name:		libogg
-Version:	1.0
-Release:	3
+Version:	1.1
+Release:	1
 Epoch:		2
 License:	BSD
 Group:		Libraries
-Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
-# Source0-md5:	382a7089f42e6f82e7d658c1cb8ee236
+Source0:	http://www.vorbis.com/files/1.0.1/unix/%{name}-%{version}.tar.gz
+# Source0-md5:	461d7097bf47864b872085a94ff94e10
 Patch0:		%{name}-ac_fixes.patch
-URL:		http://www.xiph.org/ogg/
+URL:		http://www.vorbis.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-find doc -name Makefile\* -exec rm -f {} \;
+install COPYING AUTHORS CHANGES README $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}/
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -101,11 +101,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc COPYING AUTHORS CHANGES README doc/*.{html,png} doc/ogg/
+%{_datadir}/doc/%{name}-%{version}
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/ogg
 %{_aclocaldir}/ogg.m4
+%{_pkgconfigdir}/ogg.pc
 
 %files static
 %defattr(644,root,root,755)
