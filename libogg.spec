@@ -6,7 +6,6 @@ Version:	1.0
 Release:	3
 Epoch:		2
 License:	BSD
-Vendor:		Xiphophorus <team@xiph.org>
 Group:		Libraries
 Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
