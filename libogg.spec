@@ -87,6 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
+find doc -name Makefile\* -exec rm -f {} \;
+
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
