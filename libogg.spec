@@ -3,13 +3,14 @@ Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Summary(pt_BR):	Biblioteca libogg
 Name:		libogg
 Version:	1.1
-Release:	1
+Release:	2
 Epoch:		2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.vorbis.com/files/1.0.1/unix/%{name}-%{version}.tar.gz
 # Source0-md5:	461d7097bf47864b872085a94ff94e10
 Patch0:		%{name}-ac_fixes.patch
+Patch1:		%{name}-am18.patch
 URL:		http://www.vorbis.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -70,6 +71,7 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
