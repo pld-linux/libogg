@@ -8,13 +8,6 @@ Epoch:		1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
@@ -43,13 +36,6 @@ Summary:	Ogg Bitstream Library Development
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja developerska
 Summary(pt_BR):	Bibliotecas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Obsoletes:	libogg0-devel
 
@@ -70,13 +56,6 @@ Summary:	Ogg Bitstream Static Library
 Summary(pl):	Biblioteka statyczna Ogg
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
