@@ -43,11 +43,11 @@ Obsoletes:	libogg0-devel
 The libogg-devel package contains the header files and documentation
 needed to develop applications with libogg.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumentacja potrzebna do rozwijania aplikacji
 u¿ywaj±cych biblioteki libogg.
 
-%description -l pt_BR devel
+%description devel -l pt_BR
 Bibliotecas e arquivos de inclusão para desenvolvimento com o Ogg
 Vorbis.
 
@@ -61,14 +61,14 @@ Requires:	%{name}-devel = %{version}
 %description static
 The libogg-static package contains the static libraries of libogg.
 
-%description -l pl static
+%description static -l pl
 Statyczna biblioteka libogg.
 
-%description -l pt_BR static
+%description static -l pt_BR
 Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 
 %build
@@ -92,7 +92,7 @@ gzip -9nf AUTHORS CHANGES README
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
