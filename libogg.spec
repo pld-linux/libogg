@@ -2,7 +2,7 @@ Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Name:		libogg
 Version:	1.0beta4
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
