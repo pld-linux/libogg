@@ -18,11 +18,11 @@ Obsoletes:	libogg0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Libogg is a library for manipulating ogg bitstreams. It handles both
-making ogg bitstreams and getting packets from ogg bitstreams.
+Libogg is a library for manipulating Ogg bitstreams. It handles both
+making Ogg bitstreams and getting packets from Ogg bitstreams.
 
 %description -l pl
-Libogg jest bibliotek± do manipulacji strumieniami bitowymi ogg.
+Libogg jest bibliotek± do manipulacji strumieniami bitowymi Ogg.
 Obs³uguje ona zarówno tworzenie strumieni jak i uzyskiwanie pakietów
 ze strumieni.
 
