@@ -1,8 +1,8 @@
 Summary:	Ogg Bitstream Library
 Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Name:		libogg
-Version:	1.0beta4
-Release:	2
+Version:	1.0rc1
+Release:	1
 Epoch:		1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
@@ -11,7 +11,7 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
+Source0:	http://www.vorbis.com/files/rc1/unix/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
 BuildRequires:	autoconf
