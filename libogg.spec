@@ -1,27 +1,35 @@
 Summary:	Ogg Bitstream Library
+Summary(pl):	Biblioteka obs³ugi strumieni bitowych Ogg
 Name:		libogg
-Version:	1.0.0_cvs2000.10.29
-Release:	1
+Version:	1.0beta4
+Release:	0.1
 License:	LGPL
 Vendor:		Xiphophorus <team@xiph.org>
 Group:		Libraries
 Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	ftp://www.xiph.org/ogg/vorbis/download/vorbis_nightly_cvs.tgz
-Patch0:		%{name}-make.patch
-Patch1:		libogg-ac_fixes.patch
-URL:		http://www.xiph.org/
+Source0:	http://www.xiph.org/ogg/vorbis/download/%{name}-%{version}.tar.gz
+Patch0:		%{name}-ac_fixes.patch
+URL:		http://www.xiph.org/ogg/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Libogg is a library for manipulating ogg bitstreams. It handles both
 making ogg bitstreams and getting packets from ogg bitstreams.
 
+%description -l pl
+Libogg jest bibliotek± do manipulacji strumieniami bitowymi ogg.
+Obs³uguje ona zarówno tworzenie strumieni jak i uzyskiwanie pakietów
+ze strumieni.
+
 %package devel
 Summary:	Ogg Bitstream Library Development
+Summary(pl):	Pliki nag³ówkowe i dokumentacja developerska
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -32,8 +40,13 @@ Requires:	%{name} = %{version}
 The libogg-devel package contains the header files and documentation
 needed to develop applications with libogg.
 
+%description -l pl devel
+Pliki nag³ówkowe i dokumentacja potrzebna do rozwijania aplikacji
+u¿ywaj±cych biblioteki libogg.
+
 %package static
-Summary:	Ogg Bitstream Library Development
+Summary:	Ogg Bitstream Static Library
+Summary(pl):	Biblioteka statyczna Ogg
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -43,12 +56,16 @@ Requires:	%{name}-devel = %{version}
 %description static
 The libogg-static package contains the static libraries of libogg.
 
+%description -l pl static
+Statyczna biblioteka libogg.
+
 %prep
-%setup -q -n ogg
+%setup -q 
 %patch0 -p1
-%patch1 -p1
 
 %build
+rm missing
+libtoolize --copy --force
 aclocal
 autoconf
 automake -a -c
@@ -79,7 +96,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz doc/*.{html,png}
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_bindir}/ogg-config
 %{_includedir}/ogg
 %{_aclocaldir}/ogg.m4
 
