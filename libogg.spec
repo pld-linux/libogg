@@ -1,6 +1,6 @@
 Summary:	Ogg Bitstream Library
-Summary(pl):	Biblioteka obs≥ugi strumieni bitowych Ogg
-Summary(pt_BR):	Biblioteca libogg
+Summary(pl.UTF-8):   Biblioteka obs≈Çugi strumieni bitowych Ogg
+Summary(pt_BR.UTF-8):   Biblioteca libogg
 Name:		libogg
 Version:	1.1.3
 Release:	2
@@ -21,20 +21,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Libogg is a library for manipulating Ogg bitstreams. It handles both
 making Ogg bitstreams and getting packets from Ogg bitstreams.
 
-%description -l pl
-Libogg jest bibliotek± do manipulacji strumieniami bitowymi Ogg.
-Obs≥uguje ona zarÛwno tworzenie strumieni jak i uzyskiwanie pakietÛw
+%description -l pl.UTF-8
+Libogg jest bibliotekƒÖ do manipulacji strumieniami bitowymi Ogg.
+Obs≈Çuguje ona zar√≥wno tworzenie strumieni jak i uzyskiwanie pakiet√≥w
 ze strumieni.
 
-%description -l pt_BR
-Ogg e' uma familia de diversos projetos de multimÌdia e processamento
-de sinais. libogg È a biblioteca do formato de codec bitstream para o
-codec Vorbis, formando o encoder/decoder de ·udio Ogg Vorbis.
+%description -l pt_BR.UTF-8
+Ogg e' uma familia de diversos projetos de multim√≠dia e processamento
+de sinais. libogg √© a biblioteca do formato de codec bitstream para o
+codec Vorbis, formando o encoder/decoder de √°udio Ogg Vorbis.
 
 %package devel
 Summary:	Ogg Bitstream Library Development
-Summary(pl):	Pliki nag≥Ûwkowe i dokumentacja developerska
-Summary(pt_BR):	Bibliotecas para desenvolvimento com o Ogg Vorbis
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe i dokumentacja developerska
+Summary(pt_BR.UTF-8):   Bibliotecas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libogg0-devel
@@ -43,29 +43,29 @@ Obsoletes:	libogg0-devel
 The libogg-devel package contains the header files and documentation
 needed to develop applications with libogg.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe i dokumentacja potrzebna do rozwijania aplikacji
-uøywaj±cych biblioteki libogg.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe i dokumentacja potrzebna do rozwijania aplikacji
+u≈ºywajƒÖcych biblioteki libogg.
 
-%description devel -l pt_BR
-Bibliotecas e arquivos de inclus„o para desenvolvimento com o Ogg
+%description devel -l pt_BR.UTF-8
+Bibliotecas e arquivos de inclus√£o para desenvolvimento com o Ogg
 Vorbis.
 
 %package static
 Summary:	Ogg Bitstream Static Library
-Summary(pl):	Biblioteka statyczna Ogg
-Summary(pt_BR):	Bibliotecas est·ticas para desenvolvimento com o Ogg Vorbis
+Summary(pl.UTF-8):   Biblioteka statyczna Ogg
+Summary(pt_BR.UTF-8):   Bibliotecas est√°ticas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 The libogg-static package contains the static libraries of libogg.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libogg.
 
-%description static -l pt_BR
-Bibliotecas est·ticas para desenvolvimento com o Ogg Vorbis.
+%description static -l pt_BR.UTF-8
+Bibliotecas est√°ticas para desenvolvimento com o Ogg Vorbis.
 
 %prep
 %setup -q
