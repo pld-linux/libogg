@@ -1,6 +1,6 @@
 Summary:	Ogg Bitstream Library
-Summary(pl.UTF-8):   Biblioteka obsługi strumieni bitowych Ogg
-Summary(pt_BR.UTF-8):   Biblioteca libogg
+Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
+Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
 Version:	1.1.3
 Release:	2
@@ -33,8 +33,8 @@ codec Vorbis, formando o encoder/decoder de áudio Ogg Vorbis.
 
 %package devel
 Summary:	Ogg Bitstream Library Development
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja developerska
-Summary(pt_BR.UTF-8):   Bibliotecas para desenvolvimento com o Ogg Vorbis
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja developerska
+Summary(pt_BR.UTF-8):	Bibliotecas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libogg0-devel
@@ -53,8 +53,8 @@ Vorbis.
 
 %package static
 Summary:	Ogg Bitstream Static Library
-Summary(pl.UTF-8):   Biblioteka statyczna Ogg
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis
+Summary(pl.UTF-8):	Biblioteka statyczna Ogg
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
