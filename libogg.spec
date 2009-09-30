@@ -6,17 +6,17 @@ Summary:	Ogg Bitstream Library
 Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
 Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
-Version:	1.1.3
-Release:	3
+Version:	1.1.4
+Release:	1
 Epoch:		2
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.gz
-# Source0-md5:	eaf7dc6ebbff30975de7527a80831585
+# Source0-md5:	10200ec22543841d9d1c23e0aed4e5e9
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.6
 BuildRequires:	libtool
 Obsoletes:	libogg0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -102,13 +102,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES COPYING README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libogg.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libogg.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc devel-docs/*
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libogg.so
+%{_libdir}/libogg.la
 %{_includedir}/ogg
 %{_aclocaldir}/ogg.m4
 %{_pkgconfigdir}/ogg.pc
@@ -116,5 +117,5 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libogg.a
 %endif
