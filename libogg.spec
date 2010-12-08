@@ -6,13 +6,13 @@ Summary:	Ogg Bitstream Library
 Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
 Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 Epoch:		2
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.xz
-# Source0-md5:	4f0e6e0e1df91ccedcae2a475dc38e09
+# Source0-md5:	203c28a1d356b641253c960365e4cc48
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
 BuildRequires:	autoconf
