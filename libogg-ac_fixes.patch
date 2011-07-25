@@ -22,3 +22,22 @@
  		;;
          esac
  fi
+--- libogg-1.2.2/ogg.m4~	2009-05-21 00:57:14.000000000 +0200
++++ libogg-1.2.2/ogg.m4	2011-07-25 12:09:42.870545070 +0200
+@@ -14,16 +14,6 @@
+ AC_ARG_WITH(ogg-includes,AC_HELP_STRING([--with-ogg-includes=DIR],[Directory where libogg header files are installed (optional)]), ogg_includes="$withval", ogg_includes="")
+ AC_ARG_ENABLE(oggtest,AC_HELP_STRING([--disable-oggtest],[Do not try to compile and run a test Ogg program]),, enable_oggtest=yes)
+ 
+-  if test "x$ogg_libraries" != "x" ; then
+-    OGG_LIBS="-L$ogg_libraries"
+-  elif test "x$ogg_prefix" = "xno" || test "x$ogg_prefix" = "xyes" ; then
+-    OGG_LIBS=""
+-  elif test "x$ogg_prefix" != "x" ; then
+-    OGG_LIBS="-L$ogg_prefix/lib"
+-  elif test "x$prefix" != "xNONE" ; then
+-    OGG_LIBS="-L$prefix/lib"
+-  fi
+-
+   if test "x$ogg_prefix" != "xno" ; then
+     OGG_LIBS="$OGG_LIBS -logg"
+   fi

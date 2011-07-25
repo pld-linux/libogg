@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
 Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
 Version:	1.2.2
-Release:	1
+Release:	2
 Epoch:		2
 License:	BSD
 Group:		Libraries
