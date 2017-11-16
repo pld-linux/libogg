@@ -6,16 +6,16 @@ Summary:	Ogg Bitstream Library
 Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
 Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
-Version:	1.3.2
-Release:	2
+Version:	1.3.3
+Release:	1
 Epoch:		2
 License:	BSD
 Group:		Libraries
-Source0:	http://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.xz
-# Source0-md5:	5c3a34309d8b98640827e5d0991a4015
+Source0:	https://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.xz
+# Source0-md5:	87ed742047f065046eb6c36745d871b8
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.xiph.org/ogg/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.6
 BuildRequires:	libtool
 BuildRequires:	tar >= 1:1.22
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CHANGES COPYING README
+%doc AUTHORS CHANGES COPYING README.md
 %attr(755,root,root) %{_libdir}/libogg.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libogg.so.0
 
