@@ -1,11 +1,11 @@
 --- libogg-1.3.3/configure.ac.orig	2010-11-01 21:13:42.000000000 +0100
 +++ libogg-1.3.3/configure.ac	2010-11-03 21:34:19.187102452 +0100
 @@ -46,8 +46,8 @@
-         case $host in 
+         case $host in
          *-*-linux*)
                  DEBUG="-g -Wall -fsigned-char"
--                CFLAGS="-O20 -Wall -ffast-math -fsigned-char"
--                PROFILE="-Wall -W -pg -g -O20 -ffast-math -fsigned-char"
+-                CFLAGS="-O2 -Wall -ffast-math -fsigned-char"
+-                PROFILE="-Wall -W -pg -g -O2 -ffast-math -fsigned-char"
 +                CFLAGS="$CFLAGS -Wall -ffast-math -fsigned-char"
 +                PROFILE="$CFLAGS -Wall -W -pg -g -ffast-math -fsigned-char"
  		;;
@@ -15,10 +15,10 @@
  		;;
          *)
                  DEBUG="-g -Wall -fsigned-char"
--                CFLAGS="-O20 -fsigned-char"
--                PROFILE="-O20 -g -pg -fsigned-char" 
+-                CFLAGS="-O2 -fsigned-char"
+-                PROFILE="-O2 -g -pg -fsigned-char"
 +                CFLAGS="$CFLAGS -fsigned-char"
-+                PROFILE="$CFLAGS -g -pg -fsigned-char" 
++                PROFILE="$CFLAGS -g -pg -fsigned-char"
  		;;
          esac
  fi
