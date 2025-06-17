@@ -1,18 +1,18 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static library
+%bcond_without	static_libs	# static library
 #
 Summary:	Ogg Bitstream Library
 Summary(pl.UTF-8):	Biblioteka obsługi strumieni bitowych Ogg
 Summary(pt_BR.UTF-8):	Biblioteca libogg
 Name:		libogg
-Version:	1.3.5
+Version:	1.3.6
 Release:	1
 Epoch:		2
 License:	BSD
 Group:		Libraries
 Source0:	https://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.xz
-# Source0-md5:	3178c98341559657a15b185bf5d700a5
+# Source0-md5:	529275432dff072f63d4ed0f1f961384
 Patch0:		%{name}-ac_fixes.patch
 URL:		https://www.xiph.org/ogg/
 BuildRequires:	autoconf >= 2.50
@@ -79,8 +79,9 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	%{!?with_static_libs:--disable-static}
