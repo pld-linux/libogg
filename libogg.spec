@@ -75,7 +75,7 @@ Bibliotecas estáticas para desenvolvimento com o Ogg Vorbis.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
